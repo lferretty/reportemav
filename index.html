@@ -11,40 +11,46 @@
         type="image/png" 
         sizes="32x32">
 
-  <style>
-    html, body {
-      height: 100%;
-      margin: 0;
-      background: #000000; 
+<style>
+  html, body {
+    margin: 0;
+    background: #000000;
+  }
+
+  .contenedor {
+    width: 100%;
+    min-height: 100vh;
+  }
+
+  iframe {
+    width: 100%;
+    border: 0;
+    display: none;
+  }
+
+  /* ===== DESKTOP ===== */
+  .desktop {
+    display: block;
+    height: 100vh;
+  }
+
+  /* ===== MOBILE ===== */
+  @media (max-width: 768px) {
+
+    body {
+      overflow-y: auto;
     }
 
-    .contenedor {
-      position: fixed;
-      inset: 0;
-    }
-
-    iframe {
-      width: 100vw;
-      height: 100vh;
-      border: 0;
+    .desktop {
       display: none;
     }
 
-    /* ===== DESKTOP ===== */
-    .desktop {
+    .mobile {
       display: block;
+      height: 1200px; /* podés ajustar según tu reporte */
     }
-
-    /* ===== MOBILE ===== */
-    @media (max-width: 768px) {
-      .desktop {
-        display: none;
-      }
-      .mobile {
-        display: block;
-      }
-    }
-  </style>
+  }
+</style>
 
   <!-- Cloudflare Web Analytics -->
   <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "bd2fc6e50ab54097a6278d5b2bd6f276"}'></script>
@@ -142,6 +148,7 @@ src="https://app.powerbi.com/view?r=eyJrIjoiYzhiNjk0ZTQtODgzZi00ZWE3LTlmYWQtMWRk
 </body>
 </html> 
 --->
+
 
 
 
